@@ -18,6 +18,22 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #3b3b3b;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+
+
+
 /* Links */
 a, a:link, a:visited {
   /* color: inherit; */
@@ -278,7 +294,8 @@ body {
   width: -moz-min-content;
   width: min-content;
   top: calc((1vw + 1vh) * 15);
-  left: 20vw;
+  left: 5vw;
+  
 }
 
 .portfolio {
@@ -308,7 +325,16 @@ body {
   margin-top: calc((1vw + 1vh) * 16);
 }
 
+
+.youtube {
+  --width: 60vw;
+  width: var(--width);
+  height: calc(var(--width) / 1.8);
+  
+}
+
 .galary__right .galary__item {
+  padding-top: 150px;
   margin-bottom: 0;
   margin-top: calc((1vw + 1vh) * 7);
 }
@@ -323,8 +349,16 @@ body {
   margin-bottom: calc(1vw + 1vh);
 }
 
+.text-block_p {
+  font-size: clamp(16px, 4vw, 22px);
+}
+
 .empty {
-  height: 50vh;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
 }
 
 .pseudo_blok {
@@ -335,7 +369,7 @@ body {
 }
 
 .model3d-main {
-  height: 2900px;
+  height: 3000px;
   width: 100vw;
   background-color: #1c171b;
   font-size: calc((1vw + 1vh) * 2);
@@ -429,3 +463,10 @@ video.frame-media-right {
   padding: 30px;
   color: silver;
 }/*# sourceMappingURL=main.css.map */
+
+.player {
+  width: 100%;
+  display: flex;
+  max-width: 700px;
+  margin: 0px auto 150px;
+}
